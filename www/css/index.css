@@ -1,0 +1,122 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    text-transform:uppercase;
+    width:95%;
+    margin:auto;
+    color:#eee;
+    background-color:#444;
+    background: -webkit-linear-gradient(#444, #ddd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#444, #ddd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#444, #ddd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#444, #ddd); /* Standard syntax */
+}
+h2,h3{
+    font-size:125%;
+    width: 100%;
+    text-align:center;
+    margin-top:1em; 
+    text-decoration: underline;
+    font-weight: bold;
+}
+.banner{
+    margin-bottom: 2em;
+}
+
+.banner h1{
+    color:#eee;
+}
+.btns{
+    width: 100%;
+    margin: 1em auto;
+}
+.btns button{
+    font-size: 200%;
+    border-radius: 8px;
+    width: 100%;
+}
+.submit{
+    width: 50%;
+    margin: 0 auto;
+    background-color: #285e8e;
+    color:#eee;
+}
+/*.reset{
+      margin: 0 0 0 1%;
+    background-color: #ac2925;
+    color:#eee;
+}*/
+.ssoForm{
+    width: 100%;
+}
+.ssoForm input{
+    width:70%;
+    margin: 0 15%;
+    font-size: 90%;
+    margin-bottom: .5em;
+}
+.ssoForm label{
+    font-size:125%;
+    width: 100%;
+    text-align:left;
+    padding-left:10%;
+    margin-top:1em;
+
+}
+.logo{
+    width: 100%;
+}
+
+.alt{
+    color:#111;
+}
+.data{
+    padding-left:1%;
+    color:#111;
+    font-size: 110%;
+}
+footer{
+    margin-top:50%;
+    height: 10%;
+    color:#444;
+    text-align: center;
+}
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
