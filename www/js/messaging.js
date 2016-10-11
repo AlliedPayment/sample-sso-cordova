@@ -34,8 +34,8 @@ var Messaging = (function(config, self) {
                 }, {
                     quality: 35,
                     destinationType: navigator.camera.DestinationType.DATA_URL,
-                    targetWidth: 1200,
-                    targetHeight: 1600
+                    targetWidth: 480,
+                    targetHeight: 320
                 });
             }
         }
