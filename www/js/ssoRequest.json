@@ -12,8 +12,8 @@
       "AccountCIF": "<TODO_REPLACE_WITH_ACCOUNTCIF>",
       "AccountNumber": "<TODO_REPLACE_WITH_ACCOUNT_NUMBER>",
       "AccountName": "<TODO_REPLACE_WITH_BANK_ACCOUNT_NAME>",
-      "AvailableAccountBalance": "<TODO_REPLACE_WITH_AVAILABLE_BALANCE>", // 1000
-      "CollectedAccountBalance": "<TODO_REPLACE_WITH_COLLECTED_BALANCE>", // 1000
+      "AvailableAccountBalance": "<TODO_REPLACE_WITH_AVAILABLE_BALANCE>", // numeric
+      "CollectedAccountBalance": "<TODO_REPLACE_WITH_COLLECTED_BALANCE>", // numeric
       "RoutingNumber": "<TODO_REPLACE_WITH_ROUTING_NUMBER>",
       "AccountOwnerType": "Personal",
       "AccountType": "<TODO_REPLACE_WITH_ACCOUNT_TYPE>"
@@ -23,7 +23,7 @@
   "City": "<TODO_REPLACE_WITH_CITY>",
   "State": "<TODO_REPLACE_WITH_STATE>",
   "Zip": "<TODO_REPLACE_WITH_ZIPY>",
-  "DailyLimit": "<TODO_REPLACE_WITH_DAILY_LIMIT>", // 1000
+  "DailyLimit": "<TODO_REPLACE_WITH_DAILY_LIMIT>", // numeric
   "LogoutUri": null,
   "UserName": "<TODO_REPLACE_WITH_USERNAME>",
 }
