@@ -1,29 +1,29 @@
 {
-  "CustomerId": "test",
+  "CustomerId": "<TODO_REPLACE_WITH_USERNAME>",
   "FinancialInstitutionId": "<TODO_REPLACE_WITH_DOMAIN>",
-  "FirstName": "Support",
+  "FirstName": "<TODO_REPLACE_WITH_CUSTOMER_FIRST_NAME>",
   "MiddleName": "",
-  "LastName": "User",
+  "LastName": "<TODO_REPLACE_WITH_CUSTOMER_LAST_NAME>",
   "OverrideName": null,
-  "Email": "Support.User@AlliedPayment.com",
+  "Email": "<TODO_REPLACE_WITH_CUSTOMER_EMAIL_ADDRESS>",
   "Timeout": 50,
   "Accounts": {
     "$values": [{
-      "AccountCIF": "12345",
-      "AccountNumber": "074000010",
-      "AccountName": "My BankAccount",
-      "AvailableAccountBalance": 1000,
-      "CollectedAccountBalance": 1000,
-      "RoutingNumber": "074000010",
+      "AccountCIF": "<TODO_REPLACE_WITH_ACCOUNTCIF>",
+      "AccountNumber": "<TODO_REPLACE_WITH_ACCOUNT_NUMBER>",
+      "AccountName": "<TODO_REPLACE_WITH_BANK_ACCOUNT_NAME>",
+      "AvailableAccountBalance": "<TODO_REPLACE_WITH_AVAILABLE_BALANCE>", // 1000
+      "CollectedAccountBalance": "<TODO_REPLACE_WITH_COLLECTED_BALANCE>", // 1000
+      "RoutingNumber": "<TODO_REPLACE_WITH_ROUTING_NUMBER>",
       "AccountOwnerType": "Personal",
-      "AccountType": "Checking"
+      "AccountType": "<TODO_REPLACE_WITH_ACCOUNT_TYPE>"
     }]
   },
-  "Address1": "3201 Stellhorn Road",
-  "City": "Fort Wayne",
-  "State": "IN",
-  "Zip": "46815",
-  "DailyLimit": 1000,
+  "Address1": "<TODO_REPLACE_WITH_ADDRESS>",
+  "City": "<TODO_REPLACE_WITH_CITY>",
+  "State": "<TODO_REPLACE_WITH_STATE>",
+  "Zip": "<TODO_REPLACE_WITH_ZIPY>",
+  "DailyLimit": "<TODO_REPLACE_WITH_DAILY_LIMIT>", // 1000
   "LogoutUri": null,
-  "UserName": "support"
+  "UserName": "<TODO_REPLACE_WITH_USERNAME>",
 }
