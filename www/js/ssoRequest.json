@@ -25,5 +25,5 @@
   "Zip": "<TODO_REPLACE_WITH_ZIPY>",
   "DailyLimit": "<TODO_REPLACE_WITH_DAILY_LIMIT>", // numeric
   "LogoutUri": null,
-  "UserName": "<TODO_REPLACE_WITH_USERNAME>",
+  "UserName": "<TODO_REPLACE_WITH_USERNAME>"
 }
