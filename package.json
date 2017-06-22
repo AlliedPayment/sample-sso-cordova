@@ -1,0 +1,18 @@
+{
+    "name": "com.alliedpayment.sso",
+    "version": "0.0.1",
+    "displayName": "Allied SSO Demo",
+    "cordova": {
+        "platforms": [
+            "android"
+        ],
+        "plugins": {
+            "cordova-plugin-camera": {}
+        }
+    },
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-camera": "^2.3.1",
+        "cordova-plugin-compat": "^1.1.0"
+    }
+}
