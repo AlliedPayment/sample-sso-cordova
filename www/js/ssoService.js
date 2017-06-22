@@ -40,10 +40,10 @@
       var message = url + '\r\n' + timestamp + '\r\n';
       var hash = CryptoJS.HmacSHA1(message, privateKey);
       var signature = hash.toString(CryptoJS.enc.Base64);
-      var authLine = 'TIMESTAMP=' + timestamp + ';SIGNATURE=' + signature + ';PUBLICKEY=' + publicKey + ';';
+      var authLine = 'TIMESTAMP=' + timestamp + ';SIGNATURE=' + signature + ';PUBLICKEY=' + publicKey;
 
       if (domain && domain.length > 0 && domain.trim() !== '') {
-        authLine = authLine + 'DOMAIN=' + domain + ';';
+        authLine = authLine + ';DOMAIN=' + domain;
       }
       return authLine;
     }

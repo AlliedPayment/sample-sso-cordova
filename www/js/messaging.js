@@ -42,9 +42,11 @@ var Messaging = (function(config, self) {
     };
     //Send message to iframe informing iframe of camera availability
     var postMessage = function(event) {
+        var cameraEnabled = navigator.camera != null && navigator.camera.getPicture != null;
         console.log(event);
+        console.log('Camera enabled: ' + cameraEnabled);
         iframe.contentWindow.postMessage({
-            cameraEnabled: navigator.camera != null && navigator.camera.getPicture != null
+            cameraEnabled: cameraEnabled
         }, url);
     };
 

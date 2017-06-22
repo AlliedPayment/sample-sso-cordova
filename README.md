@@ -1,25 +1,28 @@
 # Allied SSO Demo
 
 ## Required
-- **[NodeJS][node]**         
-`Install NodeJS from the above link`
 
-###### After node is installed and on your system's path         
-- **[Cordova][cordova]**         
-`$ npm install -g cordova`         
-`$ cd path\to\app\root`         
+- **[NodeJS][node]**
+  - `Install NodeJS from the above link`
 
-#### Build          
-`$ cordova build `                
+##### After node is installed and on your system's path
 
-#### Run On Android                
+- **[Cordova][cordova]**
+  - `$ npm install -g cordova`
+  - `$ cd path\to\app\root`
+
+#### Build
+`$ cordova build `
+
+#### Run On Android
 `$ cordova run android `
-######NOTE: cordova run will perform a build before installing the application on an emulator/device           
 
-## About                 
+##### NOTE: cordova run will perform a build before installing the application on an emulator/device
+
+## About
 
 This example uses [AngularJS][angular] to create a simple application which contains an iframe that diplays Allied Payment's Demo Billpay system.
-In this situation billpay does not have access to the Cordova APIs to activate the camera plugin.      
+In this situation billpay does not have access to the Cordova APIs to activate the camera plugin. 
 
 Therefore a workaround was implemented (wwww/js/messaging.js) which allows the parent application to communicate with the the billpay application through a series of messages.          
 
@@ -30,11 +33,11 @@ When the user taps "Pay with Picture" inside billpay a message requesting a pict
 
 - **privateKey**: Private API key used for authentication        
 - **publicKey**: Public API key used for authentication         
-*NOTE: Once you have been provided an API key use your key instead of these defaults*      
+  - *NOTE: Once you have been provided an API key use your key instead of these defaults*      
 - **domain**: Domain name of the financial institution         
 - **origin**: Url used to initialize & reset iframe (app.js). Used to verify the origin of the messages (messaging.js)        
 - **ssoRequest**: JSON object used as the POST body content for the SSO request     
-*NOTE: FinancialInstitutionId must be updated to match the given domain*       
+  - *NOTE: FinancialInstitutionId must be updated to match the given domain*       
 - **apiUrl**: Url to Allied's API           
 
 

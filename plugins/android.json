@@ -9,7 +9,14 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.alliedpayment.sso"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.alliedpayment.sso"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.alliedpayment.sso"
+        }
+    }
 }
