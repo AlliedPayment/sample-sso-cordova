@@ -1,29 +1,31 @@
 {
-  "CustomerId": "<TODO_REPLACE_WITH_USERNAME>",
-  "FinancialInstitutionId": "<TODO_REPLACE_WITH_DOMAIN>",
-  "FirstName": "<TODO_REPLACE_WITH_CUSTOMER_FIRST_NAME>",
+  "CustomerId": "support",
+  "FinancialInstitutionId": "ALLIED",
+  "FirstName": "first",
   "MiddleName": "",
-  "LastName": "<TODO_REPLACE_WITH_CUSTOMER_LAST_NAME>",
+  "LastName": "last",
   "OverrideName": null,
-  "Email": "<TODO_REPLACE_WITH_CUSTOMER_EMAIL_ADDRESS>",
+  "Email": "email@domain.com",
   "Timeout": 50,
   "Accounts": {
-    "$values": [{
-      "AccountCIF": "<TODO_REPLACE_WITH_ACCOUNTCIF>",
-      "AccountNumber": "<TODO_REPLACE_WITH_ACCOUNT_NUMBER>",
-      "AccountName": "<TODO_REPLACE_WITH_BANK_ACCOUNT_NAME>",
-      "AvailableAccountBalance": "<TODO_REPLACE_WITH_AVAILABLE_BALANCE>", // numeric
-      "CollectedAccountBalance": "<TODO_REPLACE_WITH_COLLECTED_BALANCE>", // numeric
-      "RoutingNumber": "<TODO_REPLACE_WITH_ROUTING_NUMBER>",
-      "AccountOwnerType": "Personal",
-      "AccountType": "<TODO_REPLACE_WITH_ACCOUNT_TYPE>"
-    }]
+    "$values": [
+      {
+        "AccountCIF": "2132132",
+        "AccountNumber": "12312321312",
+        "AccountName": "Test",
+        "AvailableAccountBalance": 100,
+        "CollectedAccountBalance": 0,
+        "RoutingNumber": "074000010",
+        "AccountOwnerType": "Personal",
+        "AccountType": "checking"
+      }
+    ]
   },
-  "Address1": "<TODO_REPLACE_WITH_ADDRESS>",
-  "City": "<TODO_REPLACE_WITH_CITY>",
-  "State": "<TODO_REPLACE_WITH_STATE>",
-  "Zip": "<TODO_REPLACE_WITH_ZIPY>",
-  "DailyLimit": "<TODO_REPLACE_WITH_DAILY_LIMIT>", // numeric
+  "Address1": "3201 Stelhorn",
+  "City": "Fort Wayne",
+  "State": "IN",
+  "Zip": "46815",
+  "DailyLimit": 1000,
   "LogoutUri": null,
-  "UserName": "<TODO_REPLACE_WITH_USERNAME>"
+  "UserName": "support"
 }
