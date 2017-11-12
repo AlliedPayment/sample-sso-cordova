@@ -2,8 +2,8 @@
 // remove '.demo' from the origin & api urls
 //
 var Config = {
-  privateKey: 'KcFlXjoOb5odaegKytM1LCsRwgw8Rpd1ds24NhNj',
-  publicKey: 'WSIlIrP6W2XY70eqkppk',
+  privateKey: '',
+  publicKey: '',
   domain: 'ALLIED',
   origin: 'https://billpay.demo.alliedpayment.com',
   ssoRequest: 'js/ssoRequest.json',
