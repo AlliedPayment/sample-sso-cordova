@@ -1,31 +1,33 @@
 {
-  "CustomerId": "support",
-  "FinancialInstitutionId": "ALLIED",
-  "FirstName": "first",
-  "MiddleName": "",
-  "LastName": "last",
-  "OverrideName": null,
-  "Email": "email@domain.com",
-  "Timeout": 50,
-  "Accounts": {
-    "$values": [
-      {
-        "AccountCIF": "2132132",
-        "AccountNumber": "12312321312",
-        "AccountName": "Test",
-        "AvailableAccountBalance": 100,
-        "CollectedAccountBalance": 0,
-        "RoutingNumber": "074000010",
-        "AccountOwnerType": "Personal",
-        "AccountType": "checking"
-      }
-    ]
-  },
-  "Address1": "3201 Stelhorn",
-  "City": "Fort Wayne",
-  "State": "IN",
-  "Zip": "46815",
-  "DailyLimit": 1000,
-  "LogoutUri": null,
-  "UserName": "support"
+    "Application": "BILLPAY",
+    "UserName": "support",
+    "ForeignKey": "support",
+    "Address1": "3201 Stelhorn Rd",
+    "City": "Fort Wayne",
+    "State": "IN",
+    "Zip": "46818",
+    "Email": "support@alliedpayment.com",
+    "FirstName": "Test",
+    "LastName": "User",
+    "FinancialInstitutionId": "allied",
+    "Accounts": {
+        "$values": [
+            {
+                "accountNumber": "1234567890",
+                "accountName": "Test Chase Checking",
+                "availableAccountBalance": "1000",
+                "routingNumber": "074000010",
+                "accountOwnerType": "personal",
+                "accountType": "checking"
+            }
+        ]
+    },
+    "PhoneNumbers": [
+        {
+            "number": "2603997400",
+            "name": "Test Cell",
+            "isTextCapable": true
+        }
+    ],
+    "ApplicationData": ""
 }
