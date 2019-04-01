@@ -1,16 +1,10 @@
-var Messaging = (function(self) {
+var Messaging = (function() {
   var iframe;
   var origin = '*';
   var imageOptions = {
     quality: 100,
     width: 1600,
     height: 1200
-  };
-
-  var initialize = function() {
-    iframe = document.getElementById('iframe');
-    iframe.addEventListener('load', checkCamera, false);
-    window.addEventListener('message', onMessage, false);
   };
 
   var onMessage = function(event) {
@@ -62,8 +56,16 @@ var Messaging = (function(self) {
     );
   };
 
-  self.initialize = initialize;
-  return self;
-})(Messaging || {});
+  // public api
+  var initialize = function() {
+    iframe = document.getElementById('iframe');
+    iframe.addEventListener('load', checkCamera, false);
+    window.addEventListener('message', onMessage, false);
+  };
+
+  return {
+    initialize: initialize
+  };
+})();
 
 Messaging.initialize();
