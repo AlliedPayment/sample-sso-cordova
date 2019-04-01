@@ -5,7 +5,7 @@ var Config = {
   privateKey: '',
   publicKey: '',
   domain: 'ALLIED',
-  origin: 'https://billpay.demo.alliedpayment.com',
+  origin: 'https://billpay.alliedpayment.com/billpayv2',
   ssoRequest: 'js/ssoRequest.json',
-  apiUrl: 'https://api.demo.alliedpayment.com'
+  apiUrl: 'https://api.alliedpayment.com'
 };

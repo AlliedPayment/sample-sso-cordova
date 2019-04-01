@@ -1,65 +1,69 @@
+var Messaging = (function(self) {
+  var iframe;
+  var origin = '*';
+  var imageOptions = {
+    quality: 100,
+    width: 1600,
+    height: 1200
+  };
 
-var Messaging = (function(config, self) {
-    var iframe;
-    var url = config.origin;
-    // Application Constructor
-    var initialize = function() {
-        bindEvents();
-    };
-    // Bind Event Listeners
-    // Attach listener to iframe
-    var bindEvents = function() {
-        iframe = document.getElementById('iframe');
-        document.addEventListener('deviceready', onDeviceReady, false);
-        // Announce that we have a camera.
-        iframe.addEventListener("load", postMessage, false);
-        // Add listener to ifame to allow billpay to send messages to parent cordova app
-        window.addEventListener("message", onMessage, false);
-    };
-    // Handle message from iframe
-    // If the message data equals camera and the message was recieved by the correct origin then
-    // activate the camera and send the imageData back to iframe in a message.
-    var onMessage = function(event) {
-        console.log(event);
-        if (event.origin === url) {
-            if (event.data === "camera") {
-                navigator.camera.getPicture(function(imageData) {
-                    iframe.contentWindow.postMessage({
-                        image: imageData
-                    }, url);
-                }, function(message) {
-                    iframe.contentWindow.postMessage({
-                        error: message
-                    }, url);
-                }, {
-                    quality: 35,
-                    destinationType: navigator.camera.DestinationType.DATA_URL,
-                    targetWidth: 1600,
-                    targetHeight: 1200
-                });
-            }
-        }
-    };
-    //Send message to iframe informing iframe of camera availability
-    var postMessage = function(event) {
-        var cameraEnabled = navigator.camera != null && navigator.camera.getPicture != null;
-        console.log(event);
-        console.log('Camera enabled: ' + cameraEnabled);
-        iframe.contentWindow.postMessage({
-            cameraEnabled: cameraEnabled
-        }, url);
-    };
+  var initialize = function() {
+    iframe = document.getElementById('iframe');
+    iframe.addEventListener('load', checkCamera, false);
+    window.addEventListener('message', onMessage, false);
+  };
 
-    var onDeviceReady = function() {
-        receivedEvent('deviceready');
-    };
+  var onMessage = function(event) {
+    console.log(event);
+    if (event.data === 'camera') {
+      getPicture();
+    }
+  };
 
-    // Update DOM on a Received Event
-    var receivedEvent = function(id) {
-        console.log('Received Event: ' + id);
+  var getPicture = function() {
+    var options = {
+      quality: imageOptions.quality,
+      destinationType: navigator.camera.DestinationType.DATA_URL,
+      targetWidth: imageOptions.width,
+      targetHeight: imageOptions.height
     };
-    self.initialize = initialize;
-    return self;
-}(Config, Messaging || {}));
+    navigator.camera.getPicture(onPicture, onError, options);
+  };
+
+  var onPicture = function(imageData) {
+    iframe.contentWindow.postMessage(
+      {
+        image: imageData
+      },
+      origin
+    );
+  };
+
+  var onError = function(message) {
+    iframe.contentWindow.postMessage(
+      {
+        error: message
+      },
+      origin
+    );
+  };
+
+  var checkCamera = function(event) {
+    var cameraEnabled =
+      navigator.camera != null && navigator.camera.getPicture != null;
+    console.log(event);
+    console.log('Camera enabled: ' + cameraEnabled);
+    // inform billpay that cordova camera will be used
+    iframe.contentWindow.postMessage(
+      {
+        cameraEnabled: cameraEnabled
+      },
+      origin
+    );
+  };
+
+  self.initialize = initialize;
+  return self;
+})(Messaging || {});
 
 Messaging.initialize();
